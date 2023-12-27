@@ -1,0 +1,15 @@
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+  <li ngbNavItem>
+    <button ngbNavLink>New Task</button>
+    <ng-template ngbNavContent>
+      <app-new-task></app-new-task>
+    </ng-template>
+  </li>
+  <li ngbNavItem>
+    <button ngbNavLink>View Task</button>
+    <ng-template ngbNavContent>
+      <app-view-task></app-view-task>
+    </ng-template>
+  </li>
+</ul>
+<div [ngbNavOutlet]="nav"></div>

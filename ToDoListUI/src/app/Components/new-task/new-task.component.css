@@ -1,0 +1,31 @@
+td,th{
+    border: 1px solid #000000;
+    padding: 5px;
+    text-align: center;
+}
+button{
+    border-style: none;
+    background: none;
+    text-decoration: underline;
+}
+label{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+input{
+    margin: 5px;
+}
+.newTask{
+border: 1px solid;
+padding: 40pt;
+margin: 20px;
+}
+.viewTask{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.dueDateWidth{
+    width: 190px;
+}

@@ -1,0 +1,21 @@
+<div class="newTask">
+    <p class="col-md-4">New Task</p>
+      <form [formGroup]="newTaskForm" (ngSubmit)="createTask()">
+        <div class="row">
+          <label class="col" for="taskName">Task Name</label><br/>
+          <div class="col">
+            <input formControlName="taskName" type="text"><br/>
+              <p style="color: red;" *ngIf="newTaskForm.get('taskName')?.hasError('required')">Task Name is required.</p>
+          </div>
+        </div>
+        <div class="row">
+          <label class="col" for="dueDate">Due Date</label>
+            <div class="col">
+              <input class="dueDateWidth" formControlName="dueDate" type="datetime-local">
+                <p style="color: red;" *ngIf="newTaskForm.get('dueDate')?.hasError('required')">Due Date is required.</p><br/>
+                <button type="submit" [disabled]="newTaskForm.invalid" style="border: 1px solid; text-decoration: none; padding-inline: 55px;margin-top: 15px;margin-inline: 5px;">Create Task</button>
+                <p *ngIf="created" style="color: rgb(0, 255, 4);">Task Created Successfully</p>
+            </div>
+        </div>
+      </form>
+  </div>

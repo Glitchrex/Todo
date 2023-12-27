@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col" style="border: 1px solid #000000; margin:25px;">
+      <p>View Task</p>
+      <div class="viewTask">
+        <table>
+          <thead>
+            <tr>
+              <th>Task Name</th>
+              <th>Due Date</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let task of tasks">
+              <td>{{task.taskName}}</td>
+              <td>{{task.dueDate | date: 'dd/MM/yyyy hh:mm a' }}</td>
+              <td>{{task.status}}</td>
+              <td><button (click)="completetask(task.id)" [hidden]="done">Mark as Complete</button>
+                <button (click)="deletetask(task.id)" >Delete</button>
+              </td>
+          </tbody>
+        </table>
+        </div>
+    </div>
+  </div>
